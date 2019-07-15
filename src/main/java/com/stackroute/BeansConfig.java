@@ -1,5 +1,6 @@
 package com.stackroute;
 
+import com.stackroute.demo.BeanLifecycleDemoBean;
 import com.stackroute.domain.Actor;
 import com.stackroute.domain.Movie;
 import org.springframework.context.annotation.Bean;
@@ -31,4 +32,10 @@ public class BeansConfig {
         Movie movie = new Movie();
         return movie;
     }
+
+    @Bean(initMethod = "afterPropertiesSet", destroyMethod = "destroy")
+    public BeanLifecycleDemoBean beanLifecycleDemoBean() {
+        return new BeanLifecycleDemoBean();
+    }
+
 }
