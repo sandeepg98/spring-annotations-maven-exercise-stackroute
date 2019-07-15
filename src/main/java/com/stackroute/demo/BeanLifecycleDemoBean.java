@@ -16,9 +16,4 @@ public class BeanLifecycleDemoBean implements InitializingBean, DisposableBean {
     public void afterPropertiesSet() throws Exception {
         System.out.println("Properties set");
     }
-
-    public BeanLifecycleDemoBean beanLifecycleDemoBean() {
-        BeanLifecycleDemoBean beanLifecycleDemoBean = new BeanLifecycleDemoBean();
-        return beanLifecycleDemoBean;
-    }
 }

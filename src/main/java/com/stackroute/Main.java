@@ -16,6 +16,5 @@ public class Main {
         BeanLifecycleDemoBean beanLifecycleDemoBean = context.getBean(BeanLifecycleDemoBean.class);
         System.out.println(beanLifecycleDemoBean);
         context.registerShutdownHook();
-
     }
 }
