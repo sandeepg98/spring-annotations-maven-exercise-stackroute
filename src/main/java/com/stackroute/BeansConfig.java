@@ -4,7 +4,6 @@ import com.stackroute.domain.Actor;
 import com.stackroute.domain.Movie;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Scope;
 
 @Configuration
 public class BeansConfig {
@@ -27,10 +26,9 @@ public class BeansConfig {
         return actor;
     }
 
-    @Bean({"movieA","movieB"})
-    @Scope("prototype")
+    @Bean
     public Movie movie() {
-        Movie movie = new Movie(actorDiljit());
+        Movie movie = new Movie();
         return movie;
     }
 }
