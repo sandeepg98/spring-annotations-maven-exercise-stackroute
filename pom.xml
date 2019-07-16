@@ -16,6 +16,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
+    <spring-version>5.1.8.RELEASE</spring-version>
   </properties>
 
   <dependencies>
@@ -30,21 +31,21 @@
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-core</artifactId>
-      <version>5.1.8.RELEASE</version>
+      <version>${spring-version}</version>
     </dependency>
 
     <!-- https://mvnrepository.com/artifact/org.springframework/spring-beans -->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-beans</artifactId>
-      <version>5.1.8.RELEASE</version>
+      <version>${spring-version}</version>
     </dependency>
 
     <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-context</artifactId>
-      <version>5.1.8.RELEASE</version>
+      <version>${spring-version}</version>
     </dependency>
   </dependencies>
 
@@ -93,4 +94,23 @@
       </plugins>
     </pluginManagement>
   </build>
+
+<!--  <build>-->
+<!--    <plugins>-->
+<!--      <plugin>-->
+<!--        <groupId>org.apache.maven.plugins</groupId>-->
+<!--        <artifactId>maven-clean-plugin</artifactId>-->
+<!--        <executions>-->
+<!--          <execution>-->
+<!--            <id>my-auto-clean</id>-->
+<!--            <phase>initialize</phase>-->
+<!--            <goals>-->
+<!--              <goal>clean</goal>-->
+<!--            </goals>-->
+<!--          </execution>-->
+<!--        </executions>-->
+
+<!--      </plugin>-->
+<!--    </plugins>-->
+<!--  </build>-->
 </project>
